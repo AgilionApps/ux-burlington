@@ -3,75 +3,195 @@
 ---
 @charset "utf-8";
 
-$base-font-family: 'Raleway', sans-serif;
-$header-font-family: 'BellotaRegular', Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
+@import 'foundation/_settings';
+@import 'foundation';
+
+$base-font-size:   21px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
-$spacing-unit:     32px;
 
-$text-color:       #111;
-$background-color: #EDEDEA;
-$brand-color:      #DE5842;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-// Width of the content area
-$content-width:    800px;
-
-$on-laptop:        800px;
-
-
-// Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-sans-serif;
+  font-weight: 600;
 }
 
-@import "base" ;
+h1 {
+  @media #{$medium-up} {
+    margin-bottom: 1.5rem;
+  }
+  @media #{$large-up} {
+    margin-bottom: 2rem;
+  }
+}
 
 body {
-  color: lighten($text-color, 15%);
+  font-family: $font-family-sans-serif;
+  font-size: $base-font-size;
+  font-weight: 300;
+  line-height: $base-line-height;
+  -webkit-text-size-adjust: 100%;
+  padding: 1rem;
 }
 
-.logo-container {
+.body-wrap {
+  background-color: $snow;
+}
+
+#global-nav {
+  margin-top: .7rem;;
+  position: relative;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 90px;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    color: $jet;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1.5rem .45rem 1.5rem 1rem;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.global-nav-logo {
+  left: .7rem;;
+  position: absolute;
+  top: 0;
+
+  h1 {
+    margin: 0;
+  }
+
+  span {
+    display: none;
+  }
+
+  a[href='/'] {
+    background: $primary-color url('/images/ux-burlington-logo.svg') no-repeat 12.5px 12.5px;
+    background-size: 55px;
+    height: 80px;
+    width: 80px;
+
+    img {
+      display: block;
+      height: 50px;
+      width: 50px;
+    }
+  }
+}
+
+#global-main {
+  @include grid-column(12, $collapse:true);
+}
+
+section > .wrapper {
+  @include grid-row();
+
+  padding: 5rem 0;
+
+  > h1,
+  > h2 {
+    text-align: center;
+  }
+}
+
+.bad-joke {
+  font-size: 12px;
+}
+
+.speaker-list {
+  @include block-grid(2);
+
+  @media #{$medium-up} {
+    @include block-grid(3);
+  }
+
+  @media #{$large-up} {
+    @include block-grid(4);
+
+    margin-top: 3rem;
+  }
+
+  .speaker-item {
+    @media #{$medium-up} {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+}
+
+.speaker-details {
+  margin-top: 8px;
   text-align: center;
-  width: 100%;
+
+  .title {
+    font-style: italic;
+  }
+
+  a {
+    display: block;
+    font-size: 1.2rem;
+  }
 }
 
-#main-logo {
-  margin: -16px auto;
-  width: 50%;
+#global-footer {
+  @include grid-column(12);
+
+  background-color: $jet;
+  color: $white;
+  margin-bottom: 1rem;
+  padding: 4rem 0;
+
+  h4 {
+    color: $white;
+    font-size: 1rem;
+  }
 }
 
-.main-header {
-  font-family: $header-font-family;
-  font-weight: normal;
-  font-size: 2.2em;
-  font-style: normal;
+.global-footer-columns {
+  @include grid-row();
+}
+
+.global-footer-column {
+  @include grid-column(3);
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+  }
+
+  a {
+    color: $white;
+    font-size: .75rem;
+  }
+}
+
+.global-footer-trailer {
+  font-size: .75rem;
   text-align: center;
+  margin-top: 4rem;
+
+  img {
+    margin: -0.13rem .1rem 0;
+    width: 1.1rem;
+  }
 }
 
-.main-sub-header {
-  font-family: $header-font-family;
-  font-weight: normal;
-  font-size: 1.4em;
-  font-style: normal;
-  text-align: center;
-}
 
 #mc_embed_signup input.email {
-  border-color: darken($background-color, 25%);
+  border-color: darken($smoke, 25%);
   border-radius: 4px;
   display: inline-block;
   margin: 0;
@@ -83,7 +203,7 @@ body {
 }
 
 #mc_embed_signup input.button {
-  background-color: $brand-color;
+  background-color: $primary-color;
   display: inline-block;
   font-size: 16px;
   height: 36px;
@@ -91,33 +211,57 @@ body {
   width: auto;
 }
 
-.main-content {
-  margin: 0 auto;
-  max-width: 600px;
-  padding: 0 16px;
-}
-
-.main-copy {
-  font-weight: 400;
-}
-
-.mailing-list-content {
-  border: 1px dashed darken($background-color, 25%);
-  border-radius: 4px;
-  padding: 16px;
-}
-
-.bad-joke {
-  font-size: 12px;
-}
-
-footer {
-  margin: 48px 0;
+#overview {
   text-align: center;
-  width: 100%;
+
+  img {
+    display: block;
+    margin: 1.9rem auto;
+  }
+
+  h1 {
+    margin: .5rem 0;
+    font-size: 3.5rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    padding: 0 2rem;
+  }
+
+  .wrapper {
+    padding: 5rem 7rem;
+  }
 }
 
-footer img {
-  display: block;
-  margin: 16px auto 0;
+#mailing-list-signup {
+  background-color: $smoke;
+  text-align: center;
 }
+
+#speakers {
+  h3 {
+    font-size: 1.25rem;
+    font-family: $font-family-sans-serif;
+    margin: 1.25rem 0 0;
+  }
+
+  a,
+  .title {
+    font-size: .85rem;
+    line-height: 1.25rem;
+  }
+
+  img {
+    border-radius: 1000px;
+  }
+}
+
+#sponsors {
+}
+

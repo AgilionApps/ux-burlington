@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html>
-
-  {% include head.html %}
+  {% include header.html %}
 
   <body>
+    <div class='body-wrap clearfix'>
+      <nav id='global-nav'>
+        <div class='global-nav-logo'>
+          <h1>
+            <a href='/'>
+            </a>
+          </h1>
+        </div>
+        <ul>
+          <li><a href='/'>Overview</a></li>
+          <li><a href='/speakers'>Speakers</a></li>
+          <li><a href='/sponsors'>Sponsors</a></li>
+        </ul>
+      </nav>
 
-    {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
+      <main id='global-main'>
         {{ content }}
-      </div>
+      </main>
+
+      {% include footer.html %}
     </div>
-
-    {% include footer.html %}
-
   </body>
-
 </html>
