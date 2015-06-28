@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
-
-  {% include head.html %}
+  {% include header.html %}
 
   <body>
+    <div class='body-wrap clearfix'>
+      {% include global-nav.html %}
 
-    {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
+      <main id='global-main'>
         {{ content }}
-      </div>
+      </main>
+
+      {% include footer.html %}
     </div>
 
-    {% include footer.html %}
-
+    <script>
+      $(document).foundation();
+    </script>
   </body>
-
 </html>

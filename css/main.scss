@@ -3,75 +3,288 @@
 ---
 @charset "utf-8";
 
-$base-font-family: 'Raleway', sans-serif;
-$header-font-family: 'BellotaRegular', Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
+@import 'foundation/_settings';
+@import 'foundation';
+
+$base-font-size:   21px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
-$spacing-unit:     32px;
-
-$text-color:       #111;
-$background-color: #EDEDEA;
-$brand-color:      #DE5842;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-// Width of the content area
-$content-width:    800px;
-
-$on-laptop:        800px;
-
-
-// Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+@mixin filter($filter) {
+  -webkit-filter: #{$filter};
+  filter: #{$filter};
 }
 
-@import "base" ;
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-sans-serif;
+  font-weight: 600;
+}
+
+h1 {
+  margin-bottom: 1em;
+
+  @media #{$medium-up} {
+    margin-bottom: 1.5rem;
+  }
+
+  @media #{$large-up} {
+    margin-bottom: 4rem;
+  }
+}
+
+hr {
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
 
 body {
-  color: lighten($text-color, 15%);
+  font-family: $font-family-sans-serif;
+  font-size: $base-font-size;
+  font-weight: 300;
+  line-height: $base-line-height;
+  -webkit-text-size-adjust: 100%;
+  padding: 1rem;
 }
 
-.logo-container {
+.body-wrap {
+  background-color: $snow;
+}
+
+.button .fi-arrow-right {
+  margin-left: .5rem;
+}
+
+#global-nav {
+  margin-top: .7rem;;
+  position: relative;
+
+  .title-area {
+    @media #{$medium-up} {
+      z-index: 2;
+    }
+  }
+
+  .top-bar.expanded .toggle-topbar a span::after {
+    box-shadow: none;
+  }
+
+  .top-bar-section {
+    @media #{$medium-up} {
+      z-index: 1;
+    }
+  }
+
+  .top-bar-section ul {
+    list-style-type: none;
+    margin: 0;
+
+    a {
+      color: $white;
+      display: inline-block;
+      font-size: 1rem;
+      font-weight: 600;
+      text-align: center;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .top-bar-ticket-link {
+      line-height: 1em;
+      margin-top: .4em;
+      padding: 1em;
+
+      &:hover {
+        background-color: $primary-color;
+      }
+    }
+
+    @media #{$medium-up} {
+      &.right {
+        padding-right: 1em;
+      }
+
+      li {
+        display: inline-block;
+      }
+
+      .top-bar-ticket-link {
+        padding-bottom: 2em;
+      }
+    }
+
+    &.left {
+      background-color: $primary-color;
+
+      @media #{$medium-up} {
+        background-color: transparent;
+        padding-left: 90px;
+
+        a {
+          color: $jet;
+          text-align: left;
+          padding: 1rem 1rem 1.25rem;
+        }
+      }
+    }
+  }
+}
+
+#global-nav-logo {
+  @media #{$medium-up} {
+    left: .7rem;;
+    position: absolute;
+    top: 0;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  span {
+    display: none;
+  }
+
+  a[href='/'] {
+    background-color: $primary-color;
+    height: 45px;
+    width: 100%;
+
+    @media #{$medium-up} {
+      background: $primary-color url('/images/ux-burlington-logo.svg') no-repeat center center;
+      background-size: 28px;
+      background-position: 12.5px 12.5px;
+      background-size: 55px;
+      height: 80px;
+      width: 80px;
+    }
+
+    img {
+      display: block;
+      height: 50px;
+      width: 50px;
+    }
+  }
+}
+
+#global-main {
+  @include grid-column(12, $collapse:true);
+}
+
+section > .wrapper {
+  @include grid-row();
+
+  padding: 3rem 1rem 5rem;
+
+  @media #{$medium-up} {
+    padding: 5rem 0;
+  }
+
+  > h1,
+  > h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}
+
+.bad-joke {
+  font-size: 12px;
+}
+
+.speaker-list {
+  @include block-grid(1);
+
+  @media #{$medium-up} {
+    @include block-grid(3);
+  }
+
+  .speaker-item {
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    @media #{$medium-up} {
+      margin: 1.5rem 0;
+    }
+  }
+
+  img {
+    @include filter('contrast(1.2) brightness(.85) grayscale(1)');
+    width: 100%;
+  }
+}
+
+.speaker-details {
+  margin-top: 8px;
   text-align: center;
-  width: 100%;
+
+  .title {
+    color: $aluminum;
+    font-weight: 300;
+  }
+
+  a {
+    display: block;
+    font-size: 1.2rem;
+  }
 }
 
-#main-logo {
-  margin: -16px auto;
-  width: 50%;
+#global-footer {
+  @include grid-column(12);
+
+  background-color: $jet;
+  color: $white;
+  margin-bottom: 1rem;
+  padding: 4rem 0;
+
+  h4 {
+    color: $white;
+    font-size: 1rem;
+  }
 }
 
-.main-header {
-  font-family: $header-font-family;
-  font-weight: normal;
-  font-size: 2.2em;
-  font-style: normal;
+.global-footer-columns {
+  @include grid-row();
+}
+
+.global-footer-column {
+  @include grid-column(12);
+
+  margin-bottom: 3rem;
   text-align: center;
+
+  @media #{$medium-up} {
+    @include grid-column(3);
+
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+  }
+
+  a {
+    color: $white;
+    font-size: .75rem;
+  }
 }
 
-.main-sub-header {
-  font-family: $header-font-family;
-  font-weight: normal;
-  font-size: 1.4em;
-  font-style: normal;
+.global-footer-trailer {
+  font-size: .75rem;
   text-align: center;
+  margin-top: 4rem;
+
+  img {
+    margin: -0.13rem .1rem 0;
+    width: 1.1rem;
+  }
 }
+
 
 #mc_embed_signup input.email {
-  border-color: darken($background-color, 25%);
+  border-color: darken($smoke, 25%);
   border-radius: 4px;
   display: inline-block;
   margin: 0;
@@ -83,7 +296,7 @@ body {
 }
 
 #mc_embed_signup input.button {
-  background-color: $brand-color;
+  background-color: $primary-color;
   display: inline-block;
   font-size: 16px;
   height: 36px;
@@ -91,33 +304,152 @@ body {
   width: auto;
 }
 
-.main-content {
-  margin: 0 auto;
-  max-width: 600px;
-  padding: 0 16px;
-}
-
-.main-copy {
-  font-weight: 400;
-}
-
-.mailing-list-content {
-  border: 1px dashed darken($background-color, 25%);
-  border-radius: 4px;
-  padding: 16px;
-}
-
-.bad-joke {
-  font-size: 12px;
-}
-
-footer {
-  margin: 48px 0;
+#mc_embed_signup_scroll {
   text-align: center;
-  width: 100%;
 }
 
-footer img {
-  display: block;
-  margin: 16px auto 0;
+#overview {
+  text-align: center;
+
+  img {
+    display: block;
+    margin: 1.9rem auto;
+  }
+
+  h1 {
+    color: $primary-color;
+    font-family: $font-family-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 0 0 .9rem;
+
+    @media #{$medium-up} {
+      font-size: 4rem;
+    }
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    padding: 0 2rem;
+  }
+
+  .wrapper {
+    padding: 3.5rem .7rem 6rem;
+
+    @media #{$medium-up} {
+      padding-left: 7rem;
+      padding-right: 7rem;
+    }
+  }
+}
+
+.darker-section {
+  background-color: $smoke;
+}
+
+.sign-up-section {
+  text-align: center;
+}
+
+#speakers {
+  h3 {
+    font-size: 1.25rem;
+    font-family: $font-family-sans-serif;
+    margin: 1.25rem 0 0;
+  }
+
+  a,
+  .title {
+    font-size: .85rem;
+    line-height: 1.25rem;
+  }
+
+  img {
+    border-radius: 1000px;
+  }
+}
+
+#speaker {
+  .wrapper {
+    padding: 3.5rem .7rem 6rem;
+
+    @media #{$medium-up} {
+      padding-left: 7rem;
+      padding-right: 7rem;
+    }
+  }
+
+  .img-wrapper {
+    text-align: center;
+  }
+
+  img {
+    border-radius: 1000px;
+    max-width: 300px;
+    @include filter('contrast(1.2) brightness(.85) grayscale(1)');
+  }
+}
+
+#where-to-stay-section {
+  li {
+    list-style-type: none;
+    margin-bottom: 1rem;
+  }
+}
+
+#footnotes-section {
+  ol {
+    list-style-type: decimal;
+  }
+}
+
+#sponsors .sponsor-logos {
+  padding-top: 2rem;
+
+  li {
+    text-align: center;
+  }
+}
+
+#schedule {
+  table {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #friday {
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+}
+
+.tech-jam .main-sub-header img {
+  width: 100%;
+
+  @media #{$medium-up} {
+    width: 50%;
+  }
+}
+
+.tech-jam-signup {
+  margin: 2.25rem 0;
+}
+
+.tech-jam-signup#mc_embed_signup form {
+  text-align: center;
+}
+
+.tech-jam-images {
+  @include grid-row();
+}
+
+.tech-jam-images img {
+  @media #{$medium-up} {
+    @include grid-column(6);
+  }
 }

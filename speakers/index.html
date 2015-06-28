@@ -1,0 +1,28 @@
+---
+layout: default
+title: Speakers
+meta_description: A User Experience Conference in Burlington, VT - June 12, 2015
+meta_keywords:
+---
+
+<section id='speakers'>
+  <div class='wrapper'>
+    <h1>Speakers</h1>
+
+    <ul class='speaker-list'>
+      {% assign speakers = site.categories.speaker | sort: 'order' %}
+      {% for speaker in speakers %}
+        <li class='speaker-item'>
+          <a href='{{ speaker.url }}'>
+            <img src="/images/speakers/{{ speaker.photo }}" alt="{{ speaker.title }}" class="speaker">
+            <div class='speaker-details'>
+              <h3>{{ speaker.title }}</h3>
+              <h4 class='title'>{{ speaker.talk }}</h4>
+            </div>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
