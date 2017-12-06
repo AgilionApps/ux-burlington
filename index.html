@@ -1,13 +1,13 @@
 ---
 layout: default
 title: Home
-meta_description: A User Experience Conference in Burlington, VT - June 9, 2017
+meta_description: A User Experience Conference in Burlington, VT
 meta_keywords:
 ---
 
 <section id='overview'>
   <div class='wrapper'>
-    <h4>Friday June 9<sup>th</sup>, 2017</h4>
+    <h4>2018 to be announced...</h4>
     <h1>UX Burlington</h1>
     <h4>Burlington, Vermont</h4>
     <p>
@@ -17,9 +17,9 @@ meta_keywords:
 <!--     <p>Tickets will go on sale <b>April 6th</b></p> -->
 
 
-    <button class="button-lrg" onclick="location.href='https://ti.to/ux-burlington/2017';">Buy Tickets</button>
+    <!-- <button class="button-lrg" onclick="location.href='https://ti.to/ux-burlington/2017';">Buy Tickets</button>-->
 
-    <!-- <p>Check out <a href="https://vimeo.com/album/4035061">talks from last year</a> while waiting to buy your ticket.</p> -->
+    <p>Check out <a href="https://www.youtube.com/channel/UCPGT8IbQw0u_pZe3so6on2Q/videos">talks from past years</a> while waiting to buy your ticket.</p>
 
   </div>
 </section>
@@ -28,7 +28,7 @@ meta_keywords:
 <section id='mailing-list-signup' class='sign-up-section darker-section' style="height:20px">
 </section>
 
-<!-- <section id='mailing-list-signup' class='sign-up-section darker-section'>
+<section id='mailing-list-signup' class='sign-up-section darker-section'>
   <div class='wrapper'>
     <h2>Sign up for the mailing list</h2>
     <p class='sub-copy'>
@@ -53,38 +53,5 @@ meta_keywords:
     <div class='bad-joke'>
       <sup>*</sup>We promise not to spam you or sell your email address. We will, however, try and sell you tickets.
     </div>
-  </div>
-</section> -->
-
-
-<section id='speakers'>
-  <div class='wrapper'>
-    <h2>Speakers</h2>
-
-    <ul class='speaker-list'>
-      {% assign speakers = site.categories.speaker | sort: 'order' %}
-      {% for speaker in speakers %}
-        <li class='speaker-item'>
-          <a href='{{ speaker.url }}'>
-            <img src="/images/speakers/{{ speaker.photo }}" alt="{{ speaker.title }}" class="speaker">
-            <div class='speaker-details'>
-              <h3>{{ speaker.title }}</h3>
-              <h4 class='title'>{{ speaker.talk }}</h4>
-            </div>
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-</section>
-
-<section id='sponsors' class='darker-section'>
-  {% include sponsors.html %}
-
-  <div class='wrapper'>
-    <p class='sub-copy'>
-      Interested in sponsoring <span class='ux-brand'>UX Burlington</span>?
-      Download our <a href='/uploads/ux-burlington-sponsorship-prospectus-2017.pdf'>sponsorship prospectus</a> for details or email us at <a href='mailto:{{site.email}}'>{{site.email}}</a>.
-    </p>
   </div>
 </section>
