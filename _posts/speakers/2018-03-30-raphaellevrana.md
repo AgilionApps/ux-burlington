@@ -1,7 +1,7 @@
 ---
 layout: speaker
 title: Raph&euml;lle Vrana
-photo: raphaellevrana.jpg
+photo: 
 talk: Design for Accessibility — How to Create Stunning Digital Experiences that are WCAG Compliant
 twitter: 
 category: speaker
