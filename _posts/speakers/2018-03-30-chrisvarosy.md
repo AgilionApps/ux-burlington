@@ -3,7 +3,7 @@ layout: speaker
 title: Chris Varosy
 photo: chrisvarosy.jpg
 talk: Visualizations for Action
-twitter: 
+twitter: cvarosy
 category: speaker
 order: 3
 ---
