@@ -5,7 +5,7 @@ photo: chrisvarosy.jpg
 talk: Visualizations for Action
 twitter: cvarosy
 category: speaker
-order: 3
+order: 4
 ---
 
 Big data is exploding, but we need the right lenses to tease insight out of the noise. Visualization design requires business and number sense, abstraction ability and many other skills not typically asked of a designer. We’ll discuss strategies for designing visualizations and dashboards that bring the insight users need to make decisions. Starting with understanding users and their needs, we’ll reverse engineer the story that solves their problems. How do we progressively disclose that story? How can we use available data dimensions to show important patterns? What filters and options should we expose? How do we make it work for colorblind people, on phones, and in German? How do we make it perform at scale for data sets big and small? What are the considerations for specific graphing packages? What about pushing it out to other applications and media? This talk will help you tackle all of these considerations and whip your data into insightful information.
