@@ -5,7 +5,7 @@ photo: amandastockwell.jpg
 talk: Getting the Right Research Participants
 twitter: MandaLaceyS
 category: speaker
-order: 1
+order: 2
 ---
 
 Let’s explore pros and cons of finding research participants using existing users, intercepting live visitors, or using market research or UX tool panels. We’ll cover best practices for screening and incentivizing participants so you can make sure your research efforts are as effective as possible.
