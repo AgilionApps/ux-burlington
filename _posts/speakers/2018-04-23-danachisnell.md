@@ -2,13 +2,23 @@
 layout: speaker
 title: Dana Chisnell
 photo: danachisnell.jpg
-talk: Conference keynote TBA
+talk: The Epic Journey of American Voters
 twitter: civicdesign
 category: speaker
 order: 1
 ---
 
-The Epic Journey of American Voters
+This talk will show how every great designed experience starts with the stories of individual humans.
+
+At the Center for Civic Design, Dana Chisnell and her team collected close to 1,000 stories from U.S. voters over 5 years. They used the stories to visualize and map the voting experience. This revealed two massive gaps in the process. 
+
+First, people who administer elections and voters have very different *mental models* on the process of voting. 
+
+The second gap was between *privileged* voters and *burdened* voters. These gaps explained why it's harder than it should be to vote in the U.S. 
+
+The stories also showed that several policies that were meant to make things better had unintended consequences that actually made it worse. And just as in the private sector and across lots of different kinds of organizations, design research could have helped solve real problems without causing new ones. 
+
+It’s time to start designing for democracy.
 
 ---
 
