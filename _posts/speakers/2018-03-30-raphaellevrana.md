@@ -5,7 +5,7 @@ photo: raphaellevrana.jpg
 talk: Design for Accessibility — How to Create Stunning Digital Experiences that are WCAG Compliant
 twitter:
 category: speaker
-order: 5
+order: 7
 ---
 
 Perceive, operate, understand, and be robust: these are the principals of accessibility online. In the near future, it is expected that the U.S. Department of Justice (DOJ) will roll out official compliance guidelines concerning website accessibility as part of the Americans with Disabilities Act (ADA). But even without finalized guidelines, costly litigations have already determined a precedent regarding online accessibility - just ask Harvard University, Target, and the NBA.
