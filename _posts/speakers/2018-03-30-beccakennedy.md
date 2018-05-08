@@ -5,7 +5,7 @@ photo: beccakennedy.jpg
 talk: Designing for Human Brains
 twitter: becca_kennedy
 category: speaker
-order: 6
+order: 8
 ---
 
 This talk will go over some key psychological principles and how they relate to UX design — like visual perception, human memory, and social psychology — with plenty of examples from products we know and love (or hate). We’ll also dig into useful research and testing methods from social sciences.
