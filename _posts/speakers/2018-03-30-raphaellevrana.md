@@ -2,7 +2,7 @@
 layout: speaker
 title: Rapha&euml;lle Vrana
 photo: raphaellevrana.jpg
-talk: Design for Accessibility — How to Create Stunning Digital Experiences that are WCAG Compliant
+talk: Practical Design for Accessibility — How to Create Stunning Digital Experiences that are WCAG Compliant
 twitter:
 category: speaker
 order: 7
@@ -14,4 +14,4 @@ As designers, marketers, and executives, it is important to regularly review our
 
 ---
 
-Rapha&euml;lle (Raph) Vrana is a UI/UX Designer for SilverTech, a national digital marketing agency, where she creates industry-leading digital experiences for organizations like Dell, East Boston Savings Bank, DentaQuest, and Drexel University. She is an advocate for accessibility and ADA compliance, ensuring that user journeys are intuitive and frictionless.
+Raphaëlle (Raph) Vrana is a Senior UX Designer. She has experience creating industry-leading digital experiences for organizations like Dell, East Boston Savings Bank, DentaQuest, and Drexel University. She is an advocate for accessibility and ADA compliance, ensuring that user journeys are intuitive and frictionless.
