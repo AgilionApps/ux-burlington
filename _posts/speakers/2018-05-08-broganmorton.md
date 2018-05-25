@@ -3,7 +3,7 @@ layout: speaker
 title: Brogan Morton
 photo: broganmorton.jpg
 talk: Let's Get Physical — Hardware Dev in a Digital World
-twitter: 
+twitter: nrgsystems
 category: speaker
 order: 3
 ---
