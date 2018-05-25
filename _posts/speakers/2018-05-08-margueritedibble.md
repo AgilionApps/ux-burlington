@@ -3,7 +3,7 @@ layout: speaker
 title: Marguerite Dibble
 photo: margueritedibble.png
 talk: Gaming UX
-twitter:
+twitter: mldibbs
 category: speaker
 order: 6
 ---
