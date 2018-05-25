@@ -4,7 +4,6 @@ title: Dana Chisnell
 photo: danachisnell.jpg
 talk: The Epic Journey of American Voters
 twitter: civicdesign
-twitter: danachis
 category: speaker
 order: 1
 ---
