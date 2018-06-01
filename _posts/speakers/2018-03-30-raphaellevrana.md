@@ -2,7 +2,7 @@
 layout: speaker
 title: Rapha&euml;lle Vrana
 photo: raphaellevrana.jpg
-talk: Practical Design for Accessibility — How to Create Stunning Digital Experiences that are WCAG Compliant
+talk: Practical Design for Accessibility
 twitter:
 category: speaker
 order: 7
